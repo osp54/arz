@@ -1,4 +1,4 @@
-const { prefix, token } = require("./config.json");
+const { prefix } = require("./config.json");
 
 const { Client, Intents, Collection, GuildMember } = require('discord.js');
 const bot = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILD_MEMBERS] });
@@ -57,5 +57,4 @@ bot.on("messageCreate", async message => {
 });
 bot.member = GuildMember
 
-//Token needed in config.json
-bot.login(token);
+bot.login(process.env.TOKEN);
