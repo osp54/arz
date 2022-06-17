@@ -5,6 +5,7 @@ const bot = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MES
 
 const fs = require("fs");
 
+require('dotenv').config();
 bot.commands = new Collection();
 
 const commandFiles = fs.readdirSync('./commands/').filter(f => f.endsWith('.js'))
