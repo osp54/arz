@@ -56,6 +56,5 @@ bot.on("messageCreate", async message => {
     if(commandfile) commandfile.run(bot,message,args);
 
 });
-bot.member = GuildMember
-
+bot.newMembers = {};
 bot.login(process.env.TOKEN);
